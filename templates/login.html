@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Dear, Diary - Login{% endblock %}
+<!--Login HTML!!-->
+{% block content %}
+<div class="auth-form">
+    <form action="{{ url_for('login') }}" method="post">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+        </div>
+        <div class="input-box">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        
+        <div class="remember-forgot">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+            <a href="#">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
+        <!-- if you dont have an account you have to create one to see the journal-->
+        <div class="register-link">
+            <p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+        </div>
+    </form>
+</div>
+{% endblock %}

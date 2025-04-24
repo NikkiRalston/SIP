@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Dear, Diary - Mental Health Resources{% endblock %}
+
+{% block content %}
+<!--this is start of resources page-->
+<main>
+    <h1>Mental Health Resources</h1>
+    <!-- suicide hotline in US-->
+    <section>
+        <h2>Crisis Support</h2>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h3>National Suicide Prevention Lifeline</h3>
+                <p>Call 988 or 1-800-273-8255 for 24/7 free and confidential support for people in distress.</p>
+                <a href="https://suicidepreventionlifeline.org/" target="_blank" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+            </div>
+        </div>
+    </section>
+    <!--Online therapy here along with their lines-->
+    <section>
+        <h2>Online Therapy Resources</h2>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h3>BetterHelp</h3>
+                <p>Professional counseling with licensed therapists online, anytime and anywhere.</p>
+                <a href="https://www.betterhelp.com/" target="_blank" class="btn btn-info"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+            </div>
+            
+            <div class="resource-card">
+                <h3>Talkspace</h3>
+                <p>Connect with a licensed therapist online and start therapy from the comfort of your device.</p>
+                <a href="https://www.talkspace.com/" target="_blank" class="btn btn-success"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+            </div>
+            
+            <div class="resource-card">
+                <h3>Cerebral</h3>
+                <p>Online mental health subscription service with medication management and therapy options.</p>
+                <a href="https://cerebral.com/" target="_blank" class="btn btn-secondary"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

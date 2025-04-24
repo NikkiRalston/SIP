@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Dear, Diary - Home{% endblock %}
+
+{% block content %}
+<main>
+    <h1>Dear, Diary</h1>
+    
+    <div class="welcome-section">
+        <p class="welcome-message">
+            Welcome to Dear, Diary, a safe space for you to journal your thoughts 
+            and access mental health resources.
+        </p>
+        
+        <div class="home-buttons">
+            <a href="{{ url_for('journal') }}" class="btn btn-primary">
+                <i class="fas fa-book"></i> Journal
+            </a>
+            <a href="{{ url_for('resources') }}" class="btn btn-info">
+                <i class="fas fa-heart"></i> Resources
+            </a>
+            {% if not current_user.is_authenticated %}
+                <a href="{{ url_for('login') }}" class="btn btn-success">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+                <a href="{{ url_for('register') }}" class="btn btn-secondary">
+                    <i class="fas fa-user-plus"></i> Register
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
